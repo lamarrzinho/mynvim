@@ -30,7 +30,7 @@ bootstrap_pckr()
 require('pckr').add{
     'neovim/nvim-lspconfig';
     'nvim-mini/mini.nvim';
-		'vague-theme/vague.nvim';
+    'vague-theme/vague.nvim';
 }
 
 require("vague").setup({})
@@ -49,4 +49,5 @@ vim.keymap.set('n', '<leader><space>', '<cmd>Pick buffers<cr>', {desc = 'Search 
 vim.keymap.set('n', '<leader>ff', '<cmd>Pick files<cr>', {desc = 'Search all files'})
 vim.keymap.set('n', '<leader>fh', '<cmd>Pick help<cr>', {desc = 'Search help tags'})
 
-vim.lsp.enable({'ruby_lsp', 'ts_ls', 'basedpyright'})
+-- LSPs habilitados: Ruby e PHP
+vim.lsp.enable({'ruby_lsp', 'intelephense'})
